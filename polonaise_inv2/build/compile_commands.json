@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/chamfort/infoc/polonaise_inv2/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9    -g   -o CMakeFiles/polonaise_inv2.dir/main.cpp.o -c /home/chamfort/infoc/polonaise_inv2/main.cpp",
+  "file": "/home/chamfort/infoc/polonaise_inv2/main.cpp"
+}
+]
