@@ -9,13 +9,13 @@ int main(int argc, char** argv){
 
     int i=1;
     int compteur=0;
-    std::vector<std::string> str;
+    std::vector<std::string> str;  /* str est un vecteur contenant des chaînes de caractère, il permet de stocker les éléments/*
 
     for (; i<argc; i++  ){
         std::string s=argv[i];
-        str.push_back(s);   /* str est un vecteur contenant des char* */
+        str.push_back(s);   /* str est un vecteur contenant des char* 
         
-    }
+    }*/
     
     std::vector<int> V;
 
@@ -35,6 +35,6 @@ int main(int argc, char** argv){
     compteur++;
     }
     }
-    std::cout<< V[compteur-1] << std::endl;
+    std::cout << V[compteur-1] << std::endl;
     return(0);
     }
