@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/chamfort/partage/monsnake/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9    -g   -o CMakeFiles/mon_snake.dir/main.cpp.o -c /home/chamfort/partage/monsnake/main.cpp",
+  "file": "/home/chamfort/partage/monsnake/main.cpp"
+}
+]

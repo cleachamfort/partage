@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/chamfort/partage/monsnake/main.cpp
+iostream
+-
+thread
+-
+chrono
+-
+snake.h
+/home/chamfort/partage/monsnake/snake.h
+screen.h
+/home/chamfort/partage/monsnake/screen.h
+board.h
+/home/chamfort/partage/monsnake/board.h
+keyboard.h
+/home/chamfort/partage/monsnake/keyboard.h
+

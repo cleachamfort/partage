@@ -11,3 +11,5 @@ struct snake_segment_st
 
 // Fonctions du snake
 void snake_init ();
+
+

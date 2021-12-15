@@ -41,42 +41,25 @@ int main(int, char**) {
         long ellapsedms = 0;
         std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
 
-        ellapsedms = (long)std::chrono::duration_cast<std::chrono::milliseconds>(end - last_move).count();
-        if (ellapsedms > 500)
-        {
-            // Simulation d'un déplacement automatique/calculé
-            x++;
-            if (x >= 10)
-            {
-            x= 1;
-            }
-            // Fin simulation
+        // ellapsedms = (long)std::chrono::duration_cast<std::chrono::milliseconds>(end - last_move).count();
+        // if (ellapsedms > 500)
+        // {
+        //     // Simulation d'un déplacement automatique/calculé
+        //     x++;
+        //     if (x >= 10)
+        //     {
+        //     x= 1;
+        //     }
+        //     // Fin simulation
 
-            last_move = std::chrono::steady_clock::now();
-        }
+        //     last_move = std::chrono::steady_clock::now();
+        // }
 
-
-        // Lecture clavier et actions
-        int key_scan = keyboard_scan();
-        if (key_scan == UP_ARROW)
-        {
-            x--;
-        }
-        else if (key_scan == DOWN_ARROW)
-        {
-            x++;
-        }
-        else if (key_scan == LEFT_ARROW)
-        {
-            y--;
-        }
-        else if (key_scan == RIGHT_ARROW)
-        {
-            y++;
-        }
         // Contrôle  des limites
         if (x < 0) x=0;
         if (y < 0) y=0;
+        if (x>len(board)) x=len(board);
+        if (y>len(board)) y=len(board);
 
 
         // Exemple d'attente si besoin était (attention, suspend entièrement l'application)
