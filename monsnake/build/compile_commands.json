@@ -1,7 +1,32 @@
 [
 {
   "directory": "/home/chamfort/partage/monsnake/build",
-  "command": "/bin/x86_64-linux-gnu-g++-9    -g   -o CMakeFiles/mon_snake.dir/main.cpp.o -c /home/chamfort/partage/monsnake/main.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/chamfort/partage/monsnake/./includes -I/home/chamfort/partage/monsnake/includes  -g   -o CMakeFiles/snake.dir/main.cpp.o -c /home/chamfort/partage/monsnake/main.cpp",
   "file": "/home/chamfort/partage/monsnake/main.cpp"
+},
+{
+  "directory": "/home/chamfort/partage/monsnake/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/chamfort/partage/monsnake/./includes -I/home/chamfort/partage/monsnake/includes  -g   -o CMakeFiles/snake.dir/cpp/CSnake.cpp.o -c /home/chamfort/partage/monsnake/cpp/CSnake.cpp",
+  "file": "/home/chamfort/partage/monsnake/cpp/CSnake.cpp"
+},
+{
+  "directory": "/home/chamfort/partage/monsnake/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/chamfort/partage/monsnake/./includes -I/home/chamfort/partage/monsnake/includes  -g   -o CMakeFiles/snake.dir/cpp/board.cpp.o -c /home/chamfort/partage/monsnake/cpp/board.cpp",
+  "file": "/home/chamfort/partage/monsnake/cpp/board.cpp"
+},
+{
+  "directory": "/home/chamfort/partage/monsnake/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/chamfort/partage/monsnake/./includes -I/home/chamfort/partage/monsnake/includes  -g   -o CMakeFiles/snake.dir/cpp/keyboard.cpp.o -c /home/chamfort/partage/monsnake/cpp/keyboard.cpp",
+  "file": "/home/chamfort/partage/monsnake/cpp/keyboard.cpp"
+},
+{
+  "directory": "/home/chamfort/partage/monsnake/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/chamfort/partage/monsnake/./includes -I/home/chamfort/partage/monsnake/includes  -g   -o CMakeFiles/snake.dir/cpp/screen.cpp.o -c /home/chamfort/partage/monsnake/cpp/screen.cpp",
+  "file": "/home/chamfort/partage/monsnake/cpp/screen.cpp"
+},
+{
+  "directory": "/home/chamfort/partage/monsnake/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/chamfort/partage/monsnake/./includes -I/home/chamfort/partage/monsnake/includes  -g   -o CMakeFiles/snake.dir/cpp/snake.cpp.o -c /home/chamfort/partage/monsnake/cpp/snake.cpp",
+  "file": "/home/chamfort/partage/monsnake/cpp/snake.cpp"
 }
 ]

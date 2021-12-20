@@ -53,7 +53,7 @@ CMAKE_BINARY_DIR = /home/chamfort/partage/monsnake/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/mon_snake.dir/all
+all: CMakeFiles/snake.dir/all
 
 .PHONY : all
 
@@ -68,7 +68,6 @@ clean: CMakeFiles/NightlyTest.dir/clean
 clean: CMakeFiles/ContinuousConfigure.dir/clean
 clean: CMakeFiles/ContinuousBuild.dir/clean
 clean: CMakeFiles/NightlyConfigure.dir/clean
-clean: CMakeFiles/NightlyMemoryCheck.dir/clean
 clean: CMakeFiles/ExperimentalTest.dir/clean
 clean: CMakeFiles/ContinuousUpdate.dir/clean
 clean: CMakeFiles/NightlyUpdate.dir/clean
@@ -88,10 +87,11 @@ clean: CMakeFiles/NightlyBuild.dir/clean
 clean: CMakeFiles/ExperimentalBuild.dir/clean
 clean: CMakeFiles/ExperimentalUpdate.dir/clean
 clean: CMakeFiles/ContinuousStart.dir/clean
+clean: CMakeFiles/ContinuousMemCheck.dir/clean
+clean: CMakeFiles/NightlyMemoryCheck.dir/clean
+clean: CMakeFiles/snake.dir/clean
 clean: CMakeFiles/ContinuousTest.dir/clean
 clean: CMakeFiles/ContinuousSubmit.dir/clean
-clean: CMakeFiles/ContinuousMemCheck.dir/clean
-clean: CMakeFiles/mon_snake.dir/clean
 
 .PHONY : clean
 
@@ -229,33 +229,6 @@ NightlyConfigure: CMakeFiles/NightlyConfigure.dir/rule
 CMakeFiles/NightlyConfigure.dir/clean:
 	$(MAKE) -f CMakeFiles/NightlyConfigure.dir/build.make CMakeFiles/NightlyConfigure.dir/clean
 .PHONY : CMakeFiles/NightlyConfigure.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/NightlyMemoryCheck.dir
-
-# All Build rule for target.
-CMakeFiles/NightlyMemoryCheck.dir/all:
-	$(MAKE) -f CMakeFiles/NightlyMemoryCheck.dir/build.make CMakeFiles/NightlyMemoryCheck.dir/depend
-	$(MAKE) -f CMakeFiles/NightlyMemoryCheck.dir/build.make CMakeFiles/NightlyMemoryCheck.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/chamfort/partage/monsnake/build/CMakeFiles --progress-num= "Built target NightlyMemoryCheck"
-.PHONY : CMakeFiles/NightlyMemoryCheck.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/NightlyMemoryCheck.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chamfort/partage/monsnake/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/NightlyMemoryCheck.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chamfort/partage/monsnake/build/CMakeFiles 0
-.PHONY : CMakeFiles/NightlyMemoryCheck.dir/rule
-
-# Convenience name for target.
-NightlyMemoryCheck: CMakeFiles/NightlyMemoryCheck.dir/rule
-
-.PHONY : NightlyMemoryCheck
-
-# clean rule for target.
-CMakeFiles/NightlyMemoryCheck.dir/clean:
-	$(MAKE) -f CMakeFiles/NightlyMemoryCheck.dir/build.make CMakeFiles/NightlyMemoryCheck.dir/clean
-.PHONY : CMakeFiles/NightlyMemoryCheck.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/ExperimentalTest.dir
@@ -771,6 +744,87 @@ CMakeFiles/ContinuousStart.dir/clean:
 .PHONY : CMakeFiles/ContinuousStart.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/ContinuousMemCheck.dir
+
+# All Build rule for target.
+CMakeFiles/ContinuousMemCheck.dir/all:
+	$(MAKE) -f CMakeFiles/ContinuousMemCheck.dir/build.make CMakeFiles/ContinuousMemCheck.dir/depend
+	$(MAKE) -f CMakeFiles/ContinuousMemCheck.dir/build.make CMakeFiles/ContinuousMemCheck.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/chamfort/partage/monsnake/build/CMakeFiles --progress-num= "Built target ContinuousMemCheck"
+.PHONY : CMakeFiles/ContinuousMemCheck.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/ContinuousMemCheck.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/chamfort/partage/monsnake/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ContinuousMemCheck.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/chamfort/partage/monsnake/build/CMakeFiles 0
+.PHONY : CMakeFiles/ContinuousMemCheck.dir/rule
+
+# Convenience name for target.
+ContinuousMemCheck: CMakeFiles/ContinuousMemCheck.dir/rule
+
+.PHONY : ContinuousMemCheck
+
+# clean rule for target.
+CMakeFiles/ContinuousMemCheck.dir/clean:
+	$(MAKE) -f CMakeFiles/ContinuousMemCheck.dir/build.make CMakeFiles/ContinuousMemCheck.dir/clean
+.PHONY : CMakeFiles/ContinuousMemCheck.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/NightlyMemoryCheck.dir
+
+# All Build rule for target.
+CMakeFiles/NightlyMemoryCheck.dir/all:
+	$(MAKE) -f CMakeFiles/NightlyMemoryCheck.dir/build.make CMakeFiles/NightlyMemoryCheck.dir/depend
+	$(MAKE) -f CMakeFiles/NightlyMemoryCheck.dir/build.make CMakeFiles/NightlyMemoryCheck.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/chamfort/partage/monsnake/build/CMakeFiles --progress-num= "Built target NightlyMemoryCheck"
+.PHONY : CMakeFiles/NightlyMemoryCheck.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/NightlyMemoryCheck.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/chamfort/partage/monsnake/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/NightlyMemoryCheck.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/chamfort/partage/monsnake/build/CMakeFiles 0
+.PHONY : CMakeFiles/NightlyMemoryCheck.dir/rule
+
+# Convenience name for target.
+NightlyMemoryCheck: CMakeFiles/NightlyMemoryCheck.dir/rule
+
+.PHONY : NightlyMemoryCheck
+
+# clean rule for target.
+CMakeFiles/NightlyMemoryCheck.dir/clean:
+	$(MAKE) -f CMakeFiles/NightlyMemoryCheck.dir/build.make CMakeFiles/NightlyMemoryCheck.dir/clean
+.PHONY : CMakeFiles/NightlyMemoryCheck.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/snake.dir
+
+# All Build rule for target.
+CMakeFiles/snake.dir/all:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/depend
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/chamfort/partage/monsnake/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target snake"
+.PHONY : CMakeFiles/snake.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/snake.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/chamfort/partage/monsnake/build/CMakeFiles 7
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/snake.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/chamfort/partage/monsnake/build/CMakeFiles 0
+.PHONY : CMakeFiles/snake.dir/rule
+
+# Convenience name for target.
+snake: CMakeFiles/snake.dir/rule
+
+.PHONY : snake
+
+# clean rule for target.
+CMakeFiles/snake.dir/clean:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/clean
+.PHONY : CMakeFiles/snake.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/ContinuousTest.dir
 
 # All Build rule for target.
@@ -823,60 +877,6 @@ ContinuousSubmit: CMakeFiles/ContinuousSubmit.dir/rule
 CMakeFiles/ContinuousSubmit.dir/clean:
 	$(MAKE) -f CMakeFiles/ContinuousSubmit.dir/build.make CMakeFiles/ContinuousSubmit.dir/clean
 .PHONY : CMakeFiles/ContinuousSubmit.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/ContinuousMemCheck.dir
-
-# All Build rule for target.
-CMakeFiles/ContinuousMemCheck.dir/all:
-	$(MAKE) -f CMakeFiles/ContinuousMemCheck.dir/build.make CMakeFiles/ContinuousMemCheck.dir/depend
-	$(MAKE) -f CMakeFiles/ContinuousMemCheck.dir/build.make CMakeFiles/ContinuousMemCheck.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/chamfort/partage/monsnake/build/CMakeFiles --progress-num= "Built target ContinuousMemCheck"
-.PHONY : CMakeFiles/ContinuousMemCheck.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/ContinuousMemCheck.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chamfort/partage/monsnake/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ContinuousMemCheck.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chamfort/partage/monsnake/build/CMakeFiles 0
-.PHONY : CMakeFiles/ContinuousMemCheck.dir/rule
-
-# Convenience name for target.
-ContinuousMemCheck: CMakeFiles/ContinuousMemCheck.dir/rule
-
-.PHONY : ContinuousMemCheck
-
-# clean rule for target.
-CMakeFiles/ContinuousMemCheck.dir/clean:
-	$(MAKE) -f CMakeFiles/ContinuousMemCheck.dir/build.make CMakeFiles/ContinuousMemCheck.dir/clean
-.PHONY : CMakeFiles/ContinuousMemCheck.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/mon_snake.dir
-
-# All Build rule for target.
-CMakeFiles/mon_snake.dir/all:
-	$(MAKE) -f CMakeFiles/mon_snake.dir/build.make CMakeFiles/mon_snake.dir/depend
-	$(MAKE) -f CMakeFiles/mon_snake.dir/build.make CMakeFiles/mon_snake.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/chamfort/partage/monsnake/build/CMakeFiles --progress-num=1,2 "Built target mon_snake"
-.PHONY : CMakeFiles/mon_snake.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/mon_snake.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chamfort/partage/monsnake/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/mon_snake.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chamfort/partage/monsnake/build/CMakeFiles 0
-.PHONY : CMakeFiles/mon_snake.dir/rule
-
-# Convenience name for target.
-mon_snake: CMakeFiles/mon_snake.dir/rule
-
-.PHONY : mon_snake
-
-# clean rule for target.
-CMakeFiles/mon_snake.dir/clean:
-	$(MAKE) -f CMakeFiles/mon_snake.dir/build.make CMakeFiles/mon_snake.dir/clean
-.PHONY : CMakeFiles/mon_snake.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

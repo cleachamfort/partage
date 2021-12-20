@@ -3,7 +3,7 @@
 /* 3 mots clés : private, public, protected */
 /*on peut en mettre autant qu'on veut*/
 
-class CSnakeSegment
+class CSnake
 {
 private:  /* philosophie de programmation : c'est là qu'on définit les attributs */  
     /* data */
@@ -14,10 +14,10 @@ private:  /* philosophie de programmation : c'est là qu'on définit les attribu
 
 /* convention : le constructeur et le destructeur ne retournent pas de type, on les repère car ils portent le nom de la classe*/
 public: /* on ne définit pas des attributs dans public*/
-    CSnakeSegment(/* args */);
-    ~CSnakeSegment();
-    deplacer();
-    change_direction(int _direction);
+    CSnake(/* args */);
+    ~CSnake();
+    void deplacer();
+    void change_direction(int direction);
 
 public:
     void change_colour();

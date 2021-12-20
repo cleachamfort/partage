@@ -7,7 +7,6 @@
 /home/chamfort/partage/monsnake/build/CMakeFiles/ContinuousConfigure.dir
 /home/chamfort/partage/monsnake/build/CMakeFiles/ContinuousBuild.dir
 /home/chamfort/partage/monsnake/build/CMakeFiles/NightlyConfigure.dir
-/home/chamfort/partage/monsnake/build/CMakeFiles/NightlyMemoryCheck.dir
 /home/chamfort/partage/monsnake/build/CMakeFiles/ExperimentalTest.dir
 /home/chamfort/partage/monsnake/build/CMakeFiles/ContinuousUpdate.dir
 /home/chamfort/partage/monsnake/build/CMakeFiles/NightlyUpdate.dir
@@ -28,7 +27,8 @@
 /home/chamfort/partage/monsnake/build/CMakeFiles/ExperimentalBuild.dir
 /home/chamfort/partage/monsnake/build/CMakeFiles/ExperimentalUpdate.dir
 /home/chamfort/partage/monsnake/build/CMakeFiles/ContinuousStart.dir
+/home/chamfort/partage/monsnake/build/CMakeFiles/ContinuousMemCheck.dir
+/home/chamfort/partage/monsnake/build/CMakeFiles/NightlyMemoryCheck.dir
+/home/chamfort/partage/monsnake/build/CMakeFiles/snake.dir
 /home/chamfort/partage/monsnake/build/CMakeFiles/ContinuousTest.dir
 /home/chamfort/partage/monsnake/build/CMakeFiles/ContinuousSubmit.dir
-/home/chamfort/partage/monsnake/build/CMakeFiles/ContinuousMemCheck.dir
-/home/chamfort/partage/monsnake/build/CMakeFiles/mon_snake.dir

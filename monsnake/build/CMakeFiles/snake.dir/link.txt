@@ -1,0 +1,1 @@
+/bin/x86_64-linux-gnu-g++-9  -g  -rdynamic CMakeFiles/snake.dir/main.cpp.o CMakeFiles/snake.dir/cpp/CSnake.cpp.o CMakeFiles/snake.dir/cpp/board.cpp.o CMakeFiles/snake.dir/cpp/keyboard.cpp.o CMakeFiles/snake.dir/cpp/screen.cpp.o CMakeFiles/snake.dir/cpp/snake.cpp.o  -o snake 

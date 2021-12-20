@@ -1,62 +1,64 @@
 #include "CSnake.h"
+#include "snake.h"
 
 /* le constructeur initialise l'univers (une sorte d'init automatique) et le destructeur permet de faire le ménage */ 
 /* le constructeur peut être vide */ 
-CSnakeSegment::CSnakeSegment(/* args */)
+CSnake::CSnake(/* args */)
 {
     _x=1;
 }
 
-CSnakeSegment::~CSnakeSegment()
+CSnake::~CSnake()
 {
 }
 
-void CSnakeSegment::change_colour()
+void CSnake::change_colour()
 {
     _colour++;
 }
 
-CSnakeSegment::deplacer(){
-    if (direction==0){
+
+void CSnake::deplacer(){
+    if (_direction==0){
         snake.pop_back();
-        snake.push_back({snake[5].first()+1,snake[5].second());
-    };
-    else if (direction==1){
+        snake.push_back({snake[5].first()+1,snake[5].second()});
+    }
+    else if (_direction==1){
         snake.pop_back();
-        snake.push_back({snake[5].first()-1,snake[5].second());
-    };
-    else if (direction==2){
+        snake.push_back({snake[5].first()-1,snake[5].second()});
+    }
+    else if (_direction==2){
         snake.pop_back();
-        snake.push_back({snake[5].first(),snake[5].second()+1);
-    };
-    else if (direction==3){
+        snake.push_back({snake[5].first(),snake[5].second()+1});
+    }
+    else if (_direction==3){
         snake.pop_back();
-        snake.push_back({snake[5].first(),snake[5].second()-1);
+        snake.push_back({snake[5].first(),snake[5].second()-1});
     }
 
 }
 
-CSnakeSegment::change_direction(int direction){
-    int key_scan = keyboard_scan();
-        if (key_scan == UP_ARROW)
+void CSnake::change_direction(int consigne){
+    
+        if (consigne==3)
         {
             snake.pop_back();
             snake.push_back({snake[5].first(),snake[5].second()-1);
-            _direction=3
+            _direction=3;
         }
-        else if (key_scan == DOWN_ARROW)
+        else if (consigne=2)
         {
             snake.pop_back();
             snake.push_back({snake[5].first(),snake[5].second()+1);
-            _direction=2
+            _direction=2;
         }
-        else if (key_scan == LEFT_ARROW)
+        else if (consigne==1)
         {
             snake.pop_back();
             snake.push_back({snake[5].first()-1,snake[5].second());
             _direction=1;
         }
-        else if (key_scan == RIGHT_ARROW)
+        else if (consigne==0)
         {
             snake.pop_back();
             snake.push_back({snake[5].first()+1,snake[5].second());

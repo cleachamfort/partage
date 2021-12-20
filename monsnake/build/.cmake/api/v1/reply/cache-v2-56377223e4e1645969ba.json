@@ -887,7 +887,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "mon_snake"
+			"value" : "snake"
 		},
 		{
 			"name" : "CMAKE_PROJECT_VERSION",
@@ -2011,6 +2011,30 @@
 		},
 		{
 			"name" : "mon_snake_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/home/chamfort/partage/monsnake"
+		},
+		{
+			"name" : "snake_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/home/chamfort/partage/monsnake/build"
+		},
+		{
+			"name" : "snake_SOURCE_DIR",
 			"properties" : 
 			[
 				{

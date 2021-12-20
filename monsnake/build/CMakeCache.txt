@@ -150,7 +150,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=mon_snake
+CMAKE_PROJECT_NAME:STATIC=snake
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=0.1.0
@@ -334,6 +334,12 @@ mon_snake_BINARY_DIR:STATIC=/home/chamfort/partage/monsnake/build
 
 //Value Computed by CMake
 mon_snake_SOURCE_DIR:STATIC=/home/chamfort/partage/monsnake
+
+//Value Computed by CMake
+snake_BINARY_DIR:STATIC=/home/chamfort/partage/monsnake/build
+
+//Value Computed by CMake
+snake_SOURCE_DIR:STATIC=/home/chamfort/partage/monsnake
 
 
 ########################

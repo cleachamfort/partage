@@ -54,7 +54,7 @@
 					[
 						0
 					],
-					"name" : "mon_snake",
+					"name" : "snake",
 					"targetIndexes" : 
 					[
 						0,
@@ -289,9 +289,9 @@
 				},
 				{
 					"directoryIndex" : 0,
-					"id" : "mon_snake::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-mon_snake-Debug-59d3be88d8ea2c3f6f2c.json",
-					"name" : "mon_snake",
+					"id" : "snake::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-snake-Debug-f0d5066520837cb0090a.json",
+					"name" : "snake",
 					"projectIndex" : 0
 				}
 			]

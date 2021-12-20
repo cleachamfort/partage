@@ -58,8 +58,8 @@ int main(int, char**) {
         // Contrôle  des limites
         if (x < 0) x=0;
         if (y < 0) y=0;
-        if (x>len(board)) x=len(board);
-        if (y>len(board)) y=len(board);
+        // if (x>len(board)) x=len(board);
+        // if (y>len(board)) y=len(board);
 
 
         // Exemple d'attente si besoin était (attention, suspend entièrement l'application)
@@ -69,3 +69,29 @@ int main(int, char**) {
     keyboard_end();
 
 }
+int key_scan = keyboard_scan();
+int consigne;
+
+while (true){
+    deplacer()
+    if (key_scan == UP_ARROW)
+        {
+            consigne=0;
+        }
+        else if (key_scan == DOWN_ARROW)
+        {
+            consigne==1;
+        }
+        else if (key_scan == LEFT_ARROW)
+        {
+            consigne==2;
+        }
+        else if (key_scan == RIGHT_ARROW)
+        {
+            consigne==3;
+        }
+     
+}
+
+
+        

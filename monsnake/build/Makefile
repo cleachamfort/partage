@@ -209,19 +209,6 @@ NightlyConfigure/fast:
 .PHONY : NightlyConfigure/fast
 
 #=============================================================================
-# Target rules for targets named NightlyMemoryCheck
-
-# Build rule for target.
-NightlyMemoryCheck: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 NightlyMemoryCheck
-.PHONY : NightlyMemoryCheck
-
-# fast build rule for target.
-NightlyMemoryCheck/fast:
-	$(MAKE) -f CMakeFiles/NightlyMemoryCheck.dir/build.make CMakeFiles/NightlyMemoryCheck.dir/build
-.PHONY : NightlyMemoryCheck/fast
-
-#=============================================================================
 # Target rules for targets named ExperimentalTest
 
 # Build rule for target.
@@ -469,6 +456,45 @@ ContinuousStart/fast:
 .PHONY : ContinuousStart/fast
 
 #=============================================================================
+# Target rules for targets named ContinuousMemCheck
+
+# Build rule for target.
+ContinuousMemCheck: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ContinuousMemCheck
+.PHONY : ContinuousMemCheck
+
+# fast build rule for target.
+ContinuousMemCheck/fast:
+	$(MAKE) -f CMakeFiles/ContinuousMemCheck.dir/build.make CMakeFiles/ContinuousMemCheck.dir/build
+.PHONY : ContinuousMemCheck/fast
+
+#=============================================================================
+# Target rules for targets named NightlyMemoryCheck
+
+# Build rule for target.
+NightlyMemoryCheck: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlyMemoryCheck
+.PHONY : NightlyMemoryCheck
+
+# fast build rule for target.
+NightlyMemoryCheck/fast:
+	$(MAKE) -f CMakeFiles/NightlyMemoryCheck.dir/build.make CMakeFiles/NightlyMemoryCheck.dir/build
+.PHONY : NightlyMemoryCheck/fast
+
+#=============================================================================
+# Target rules for targets named snake
+
+# Build rule for target.
+snake: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 snake
+.PHONY : snake
+
+# fast build rule for target.
+snake/fast:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/build
+.PHONY : snake/fast
+
+#=============================================================================
 # Target rules for targets named ContinuousTest
 
 # Build rule for target.
@@ -494,31 +520,140 @@ ContinuousSubmit/fast:
 	$(MAKE) -f CMakeFiles/ContinuousSubmit.dir/build.make CMakeFiles/ContinuousSubmit.dir/build
 .PHONY : ContinuousSubmit/fast
 
-#=============================================================================
-# Target rules for targets named ContinuousMemCheck
+cpp/CSnake.o: cpp/CSnake.cpp.o
 
-# Build rule for target.
-ContinuousMemCheck: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ContinuousMemCheck
-.PHONY : ContinuousMemCheck
+.PHONY : cpp/CSnake.o
 
-# fast build rule for target.
-ContinuousMemCheck/fast:
-	$(MAKE) -f CMakeFiles/ContinuousMemCheck.dir/build.make CMakeFiles/ContinuousMemCheck.dir/build
-.PHONY : ContinuousMemCheck/fast
+# target to build an object file
+cpp/CSnake.cpp.o:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/cpp/CSnake.cpp.o
+.PHONY : cpp/CSnake.cpp.o
 
-#=============================================================================
-# Target rules for targets named mon_snake
+cpp/CSnake.i: cpp/CSnake.cpp.i
 
-# Build rule for target.
-mon_snake: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 mon_snake
-.PHONY : mon_snake
+.PHONY : cpp/CSnake.i
 
-# fast build rule for target.
-mon_snake/fast:
-	$(MAKE) -f CMakeFiles/mon_snake.dir/build.make CMakeFiles/mon_snake.dir/build
-.PHONY : mon_snake/fast
+# target to preprocess a source file
+cpp/CSnake.cpp.i:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/cpp/CSnake.cpp.i
+.PHONY : cpp/CSnake.cpp.i
+
+cpp/CSnake.s: cpp/CSnake.cpp.s
+
+.PHONY : cpp/CSnake.s
+
+# target to generate assembly for a file
+cpp/CSnake.cpp.s:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/cpp/CSnake.cpp.s
+.PHONY : cpp/CSnake.cpp.s
+
+cpp/board.o: cpp/board.cpp.o
+
+.PHONY : cpp/board.o
+
+# target to build an object file
+cpp/board.cpp.o:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/cpp/board.cpp.o
+.PHONY : cpp/board.cpp.o
+
+cpp/board.i: cpp/board.cpp.i
+
+.PHONY : cpp/board.i
+
+# target to preprocess a source file
+cpp/board.cpp.i:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/cpp/board.cpp.i
+.PHONY : cpp/board.cpp.i
+
+cpp/board.s: cpp/board.cpp.s
+
+.PHONY : cpp/board.s
+
+# target to generate assembly for a file
+cpp/board.cpp.s:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/cpp/board.cpp.s
+.PHONY : cpp/board.cpp.s
+
+cpp/keyboard.o: cpp/keyboard.cpp.o
+
+.PHONY : cpp/keyboard.o
+
+# target to build an object file
+cpp/keyboard.cpp.o:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/cpp/keyboard.cpp.o
+.PHONY : cpp/keyboard.cpp.o
+
+cpp/keyboard.i: cpp/keyboard.cpp.i
+
+.PHONY : cpp/keyboard.i
+
+# target to preprocess a source file
+cpp/keyboard.cpp.i:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/cpp/keyboard.cpp.i
+.PHONY : cpp/keyboard.cpp.i
+
+cpp/keyboard.s: cpp/keyboard.cpp.s
+
+.PHONY : cpp/keyboard.s
+
+# target to generate assembly for a file
+cpp/keyboard.cpp.s:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/cpp/keyboard.cpp.s
+.PHONY : cpp/keyboard.cpp.s
+
+cpp/screen.o: cpp/screen.cpp.o
+
+.PHONY : cpp/screen.o
+
+# target to build an object file
+cpp/screen.cpp.o:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/cpp/screen.cpp.o
+.PHONY : cpp/screen.cpp.o
+
+cpp/screen.i: cpp/screen.cpp.i
+
+.PHONY : cpp/screen.i
+
+# target to preprocess a source file
+cpp/screen.cpp.i:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/cpp/screen.cpp.i
+.PHONY : cpp/screen.cpp.i
+
+cpp/screen.s: cpp/screen.cpp.s
+
+.PHONY : cpp/screen.s
+
+# target to generate assembly for a file
+cpp/screen.cpp.s:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/cpp/screen.cpp.s
+.PHONY : cpp/screen.cpp.s
+
+cpp/snake.o: cpp/snake.cpp.o
+
+.PHONY : cpp/snake.o
+
+# target to build an object file
+cpp/snake.cpp.o:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/cpp/snake.cpp.o
+.PHONY : cpp/snake.cpp.o
+
+cpp/snake.i: cpp/snake.cpp.i
+
+.PHONY : cpp/snake.i
+
+# target to preprocess a source file
+cpp/snake.cpp.i:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/cpp/snake.cpp.i
+.PHONY : cpp/snake.cpp.i
+
+cpp/snake.s: cpp/snake.cpp.s
+
+.PHONY : cpp/snake.s
+
+# target to generate assembly for a file
+cpp/snake.cpp.s:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/cpp/snake.cpp.s
+.PHONY : cpp/snake.cpp.s
 
 main.o: main.cpp.o
 
@@ -526,7 +661,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/mon_snake.dir/build.make CMakeFiles/mon_snake.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -535,7 +670,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/mon_snake.dir/build.make CMakeFiles/mon_snake.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -544,7 +679,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/mon_snake.dir/build.make CMakeFiles/mon_snake.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -562,7 +697,6 @@ help:
 	@echo "... ContinuousConfigure"
 	@echo "... ContinuousBuild"
 	@echo "... NightlyConfigure"
-	@echo "... NightlyMemoryCheck"
 	@echo "... ExperimentalTest"
 	@echo "... ContinuousUpdate"
 	@echo "... NightlyUpdate"
@@ -583,10 +717,26 @@ help:
 	@echo "... ExperimentalBuild"
 	@echo "... ExperimentalUpdate"
 	@echo "... ContinuousStart"
+	@echo "... ContinuousMemCheck"
+	@echo "... NightlyMemoryCheck"
+	@echo "... snake"
 	@echo "... ContinuousTest"
 	@echo "... ContinuousSubmit"
-	@echo "... ContinuousMemCheck"
-	@echo "... mon_snake"
+	@echo "... cpp/CSnake.o"
+	@echo "... cpp/CSnake.i"
+	@echo "... cpp/CSnake.s"
+	@echo "... cpp/board.o"
+	@echo "... cpp/board.i"
+	@echo "... cpp/board.s"
+	@echo "... cpp/keyboard.o"
+	@echo "... cpp/keyboard.i"
+	@echo "... cpp/keyboard.s"
+	@echo "... cpp/screen.o"
+	@echo "... cpp/screen.i"
+	@echo "... cpp/screen.s"
+	@echo "... cpp/snake.o"
+	@echo "... cpp/snake.i"
+	@echo "... cpp/snake.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

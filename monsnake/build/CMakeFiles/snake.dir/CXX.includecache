@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../includes/CSnake.h
+
+../includes/snake.h
+vector
+-
+
+/home/chamfort/partage/monsnake/cpp/CSnake.cpp
+CSnake.h
+/home/chamfort/partage/monsnake/cpp/CSnake.h
+snake.h
+/home/chamfort/partage/monsnake/cpp/snake.h
+
