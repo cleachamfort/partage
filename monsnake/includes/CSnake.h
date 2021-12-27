@@ -16,6 +16,7 @@ private:  /* philosophie de programmation : c'est là qu'on définit les attribu
 public: /* on ne définit pas des attributs dans public*/
     CSnake(/* args */);
     ~CSnake();
+    void snake_init ();
     void deplacer();
     void change_direction(int direction);
 
@@ -24,3 +25,7 @@ public:
 
 /* protected : accessible aux classes dérivées */ 
 };
+
+
+
+

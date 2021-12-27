@@ -3,7 +3,6 @@
 
 CMakeFiles/snake.dir/cpp/CSnake.cpp.o
  ../includes/CSnake.h
- ../includes/snake.h
  /home/chamfort/partage/monsnake/cpp/CSnake.cpp
 CMakeFiles/snake.dir/cpp/board.cpp.o
  ../includes/board.h
@@ -15,11 +14,8 @@ CMakeFiles/snake.dir/cpp/screen.cpp.o
  ../includes/screen.h
  /home/chamfort/partage/monsnake/cpp/screen.cpp
 CMakeFiles/snake.dir/cpp/snake.cpp.o
- ../includes/snake.h
- /home/chamfort/partage/monsnake/cpp/snake.cpp
 CMakeFiles/snake.dir/main.cpp.o
  ../includes/board.h
  ../includes/keyboard.h
  ../includes/screen.h
- ../includes/snake.h
  /home/chamfort/partage/monsnake/main.cpp
