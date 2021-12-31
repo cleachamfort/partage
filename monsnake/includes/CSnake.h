@@ -13,12 +13,12 @@ private:  /* philosophie de programmation : c'est là qu'on définit les attribu
     int _y = 0;
     int _colour = 0;
     int _direction=0;
+    void snake_init ();
 
 /* convention : le constructeur et le destructeur ne retournent pas de type, on les repère car ils portent le nom de la classe*/
 public: /* on ne définit pas des attributs dans public*/
     CSnake(/* args */);
     ~CSnake();
-    void snake_init ();
     void deplacer();
     void change_direction(int direction);
 

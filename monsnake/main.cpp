@@ -15,9 +15,7 @@
 // Variables de contexte du board
 std::map<std::pair<int,int>,bool> snake_board;
 
-// Variables de contexte du snake
-int snake_size = 5;
-std::vector<snake_segment_st> snake_segments;
+
 
 int main(int, char**) {
     std::cout << "Snake starting...\n";
@@ -68,12 +66,15 @@ int main(int, char**) {
 
     keyboard_end();
 
-}
+
 int key_scan = keyboard_scan();
 int consigne;
 
+CSnake snake;
+
 while (true){
-    deplacer()
+
+    snake.deplacer();
     if (key_scan == UP_ARROW)
         {
             consigne=0;
@@ -90,6 +91,7 @@ while (true){
         {
             consigne==3;
         }
+}
      
 }
 
