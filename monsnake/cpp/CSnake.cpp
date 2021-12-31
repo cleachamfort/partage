@@ -3,7 +3,7 @@
 
 
 /* le constructeur initialise l'univers (une sorte d'init automatique) et le destructeur permet de faire le ménage */ 
-/* le constructeur peut être vide */ 
+/* le constructeur peut être vid */ 
 CSnake::CSnake(/* args */)
 {
     _x=1;
