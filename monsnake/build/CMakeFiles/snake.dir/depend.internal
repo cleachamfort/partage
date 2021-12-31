@@ -13,8 +13,8 @@ CMakeFiles/snake.dir/cpp/keyboard.cpp.o
 CMakeFiles/snake.dir/cpp/screen.cpp.o
  ../includes/screen.h
  /home/chamfort/partage/monsnake/cpp/screen.cpp
-CMakeFiles/snake.dir/cpp/snake.cpp.o
 CMakeFiles/snake.dir/main.cpp.o
+ ../includes/CSnake.h
  ../includes/board.h
  ../includes/keyboard.h
  ../includes/screen.h

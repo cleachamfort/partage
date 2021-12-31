@@ -23,10 +23,5 @@
   "directory": "/home/chamfort/partage/monsnake/build",
   "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/chamfort/partage/monsnake/./includes -I/home/chamfort/partage/monsnake/includes  -g   -o CMakeFiles/snake.dir/cpp/screen.cpp.o -c /home/chamfort/partage/monsnake/cpp/screen.cpp",
   "file": "/home/chamfort/partage/monsnake/cpp/screen.cpp"
-},
-{
-  "directory": "/home/chamfort/partage/monsnake/build",
-  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/chamfort/partage/monsnake/./includes -I/home/chamfort/partage/monsnake/includes  -g   -o CMakeFiles/snake.dir/cpp/snake.cpp.o -c /home/chamfort/partage/monsnake/cpp/snake.cpp",
-  "file": "/home/chamfort/partage/monsnake/cpp/snake.cpp"
 }
 ]

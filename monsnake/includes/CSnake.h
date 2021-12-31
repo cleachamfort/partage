@@ -1,4 +1,5 @@
 #pragma once
+#include <vector>
 /* une classe : on veut cacher des choses au monde exterieur */ 
 /* 3 mots clés : private, public, protected */
 /*on peut en mettre autant qu'on veut*/
@@ -7,6 +8,7 @@ class CSnake
 {
 private:  /* philosophie de programmation : c'est là qu'on définit les attributs */  
     /* data */
+    std::vector <std::pair<int,int>> snake;
     int _x = 0;
     int _y = 0;
     int _colour = 0;

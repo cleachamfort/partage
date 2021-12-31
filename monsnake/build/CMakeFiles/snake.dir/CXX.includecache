@@ -7,10 +7,38 @@
 #IncludeRegexTransform: 
 
 ../includes/CSnake.h
+vector
+-
+
+../includes/board.h
+map
+-
+
+../includes/keyboard.h
+
+../includes/screen.h
+map
+-
 
 /home/chamfort/partage/monsnake/cpp/CSnake.cpp
 CSnake.h
 /home/chamfort/partage/monsnake/cpp/CSnake.h
 vector
 -
+
+/home/chamfort/partage/monsnake/main.cpp
+iostream
+-
+thread
+-
+chrono
+-
+CSnake.h
+/home/chamfort/partage/monsnake/CSnake.h
+screen.h
+/home/chamfort/partage/monsnake/screen.h
+board.h
+/home/chamfort/partage/monsnake/board.h
+keyboard.h
+/home/chamfort/partage/monsnake/keyboard.h
 

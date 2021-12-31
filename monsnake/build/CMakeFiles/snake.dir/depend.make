@@ -13,7 +13,7 @@ CMakeFiles/snake.dir/cpp/keyboard.cpp.o: ../cpp/keyboard.cpp
 CMakeFiles/snake.dir/cpp/screen.cpp.o: ../includes/screen.h
 CMakeFiles/snake.dir/cpp/screen.cpp.o: ../cpp/screen.cpp
 
-
+CMakeFiles/snake.dir/main.cpp.o: ../includes/CSnake.h
 CMakeFiles/snake.dir/main.cpp.o: ../includes/board.h
 CMakeFiles/snake.dir/main.cpp.o: ../includes/keyboard.h
 CMakeFiles/snake.dir/main.cpp.o: ../includes/screen.h

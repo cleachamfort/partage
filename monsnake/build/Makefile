@@ -628,33 +628,6 @@ cpp/screen.cpp.s:
 	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/cpp/screen.cpp.s
 .PHONY : cpp/screen.cpp.s
 
-cpp/snake.o: cpp/snake.cpp.o
-
-.PHONY : cpp/snake.o
-
-# target to build an object file
-cpp/snake.cpp.o:
-	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/cpp/snake.cpp.o
-.PHONY : cpp/snake.cpp.o
-
-cpp/snake.i: cpp/snake.cpp.i
-
-.PHONY : cpp/snake.i
-
-# target to preprocess a source file
-cpp/snake.cpp.i:
-	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/cpp/snake.cpp.i
-.PHONY : cpp/snake.cpp.i
-
-cpp/snake.s: cpp/snake.cpp.s
-
-.PHONY : cpp/snake.s
-
-# target to generate assembly for a file
-cpp/snake.cpp.s:
-	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/cpp/snake.cpp.s
-.PHONY : cpp/snake.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -734,9 +707,6 @@ help:
 	@echo "... cpp/screen.o"
 	@echo "... cpp/screen.i"
 	@echo "... cpp/screen.s"
-	@echo "... cpp/snake.o"
-	@echo "... cpp/snake.i"
-	@echo "... cpp/snake.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

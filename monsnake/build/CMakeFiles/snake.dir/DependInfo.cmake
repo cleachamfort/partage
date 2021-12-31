@@ -8,7 +8,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/chamfort/partage/monsnake/cpp/board.cpp" "/home/chamfort/partage/monsnake/build/CMakeFiles/snake.dir/cpp/board.cpp.o"
   "/home/chamfort/partage/monsnake/cpp/keyboard.cpp" "/home/chamfort/partage/monsnake/build/CMakeFiles/snake.dir/cpp/keyboard.cpp.o"
   "/home/chamfort/partage/monsnake/cpp/screen.cpp" "/home/chamfort/partage/monsnake/build/CMakeFiles/snake.dir/cpp/screen.cpp.o"
-  "/home/chamfort/partage/monsnake/cpp/snake.cpp" "/home/chamfort/partage/monsnake/build/CMakeFiles/snake.dir/cpp/snake.cpp.o"
   "/home/chamfort/partage/monsnake/main.cpp" "/home/chamfort/partage/monsnake/build/CMakeFiles/snake.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

@@ -2,7 +2,7 @@
 #include <thread>
 #include <chrono>
 
-#include "snake.h"
+#include "CSnake.h"
 #include "screen.h"
 #include "board.h"
 #include "keyboard.h"
