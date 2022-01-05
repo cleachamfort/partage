@@ -16,10 +16,11 @@ public:
     ~Matrix();
     /* opérateurs */
     int operator()(int i, int j);
+    void print() const;
     Matrix operator+(const Matrix &mat);
     Matrix operator-(const Matrix &mat);
     Matrix operator*(int entier);
-    Matrix operator*(const Matrix &mat);
+    Matrix operator*(const Matrix mat);
     /* get */
     std::vector <int> getTab();
     

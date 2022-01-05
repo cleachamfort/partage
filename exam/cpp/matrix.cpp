@@ -1,6 +1,7 @@
 #include "matrix.h"
 #include <vector>
 #include <cassert>
+#include <iostream>
 
 /* constructeurs et destructeur */
 Matrix::Matrix()
@@ -33,6 +34,15 @@ int Matrix::operator()(int i, int j)
     return(res);
 }
 
+void Matrix::print() const{
+    int n=m_nligne;
+    int m=m_ncolonne;
+    for (int i=0; i<n; i++){
+        for (int j=0; j<m; j++){
+            std::cout << (i,j) << std::endl;
+        }
+    }
+}
 Matrix Matrix::operator+(const Matrix &mat) 
 {
     int n=m_nligne;
@@ -78,7 +88,7 @@ Matrix Matrix::operator*(int entier)
 
 }
 
-Matrix Matrix::operator*(const Matrix &mat) 
+Matrix Matrix::operator*(const Matrix mat) 
 {
     int n1=m_nligne;
     int m1=m_ncolonne;
@@ -94,7 +104,7 @@ Matrix Matrix::operator*(const Matrix &mat)
             
             for (int k=0; k<m1; k++){
                 int value=mat(k,j);
-                S=S+this(i,k)* value ;}
+                S=S+ (i,k)* value ;}
             }
             res.tab [compteur]=S;
             compteur++;
