@@ -39,7 +39,7 @@ void Matrix::print() const{
     int m=m_ncolonne;
     for (int i=0; i<n; i++){
         for (int j=0; j<m; j++){
-            std::cout << (i,j) << std::endl;
+            std::cout << *this(i,j) << std::endl;
         }
     }
 }
@@ -88,7 +88,7 @@ Matrix Matrix::operator*(int entier)
 
 }
 
-Matrix Matrix::operator*(const Matrix mat) 
+Matrix Matrix::operator*(Matrix mat) 
 {
     int n1=m_nligne;
     int m1=m_ncolonne;
@@ -104,7 +104,7 @@ Matrix Matrix::operator*(const Matrix mat)
             
             for (int k=0; k<m1; k++){
                 int value=mat(k,j);
-                S=S+ (i,k)* value ;}
+                S=S+ *this(i,k)* value ;}
             }
             res.tab [compteur]=S;
             compteur++;
