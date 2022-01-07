@@ -13,14 +13,16 @@ public:
     /* constructeurs et destructeur */
     Matrix();
     Matrix(int nligne, int ncolonne, int valeur);
+    Matrix(int nligne, int ncolonne, std::vector <int> liste);
     ~Matrix();
     /* opérateurs */
-    int operator()(int i, int j);
+    int getv(int i, int j) const;
+    int operator()(int i, int j) const;
     void print() const;
-    Matrix operator+(const Matrix &mat);
-    Matrix operator-(const Matrix &mat);
-    Matrix operator*(int entier);
-    Matrix operator*(const Matrix mat);
+    Matrix operator+(const Matrix &mat) const;
+    Matrix operator-(const Matrix &mat) const;
+    Matrix operator*(int entier) const;
+    Matrix operator*(const Matrix mat) const;
     /* get */
     std::vector <int> getTab();
     
