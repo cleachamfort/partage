@@ -23,6 +23,14 @@ public:
     Matrix operator-(const Matrix &mat) const;
     Matrix operator*(int entier) const;
     Matrix operator*(const Matrix mat) const;
+    /* question 2 */
+    Matrix transpose() const;
+    Matrix ligne(int i);
+    int norme(Matrix mat);
+    Matrix solve(Matrix A, Matrix b, Matrix x0) ;
+    Matrix Id(int n);
+    Matrix colonne(const Matrix mat);
+
     /* get */
     std::vector <int> getTab();
     

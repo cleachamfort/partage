@@ -1,4 +1,5 @@
 #include "matrix.h"
+#include "math.h"
 #include <vector>
 #include <cassert>
 #include <iostream>
@@ -9,10 +10,14 @@ Matrix::Matrix()
 
 }
 
+/* construire une matrice remplie d'une unique valeur */
+
 Matrix::Matrix(int nligne, int ncolonne, int valeur): m_nligne(nligne), m_ncolonne(ncolonne), tab(nligne*ncolonne, valeur)
 {
     
 }
+
+/* construire une matrice à partir d'une ligne */
 
 Matrix::Matrix(int nligne, int ncolonne, std::vector <int> liste){
     m_nligne=nligne;
@@ -47,6 +52,7 @@ int Matrix::operator()(int i,int j) const{
     return(getv(i,j));
 }
 
+/*permet d'afficher la matrice */
 void Matrix::print() const{
     int n=m_nligne;
     int m=m_ncolonne;
@@ -57,6 +63,7 @@ void Matrix::print() const{
         std::cout << std::endl;
     }
 }
+/* somme de deux matrices */
 Matrix Matrix::operator+(const Matrix &mat) const 
 {
     int n=m_nligne;
@@ -71,7 +78,7 @@ Matrix Matrix::operator+(const Matrix &mat) const
     return(res);
 
 }
-
+/* différence de deux matrices */
 Matrix Matrix::operator-(const Matrix &mat) const
 {
     int n=m_nligne;
@@ -87,6 +94,7 @@ Matrix Matrix::operator-(const Matrix &mat) const
     return(res);
 }
 
+/* produit d'une matrice par un entier */
 Matrix Matrix::operator*(int entier) const
 {
     int n=m_nligne;
@@ -102,6 +110,7 @@ Matrix Matrix::operator*(int entier) const
     return(res);
 }
 
+/* produit de deux matrices */
 Matrix Matrix::operator*(Matrix mat) const
 {
     int n1=m_nligne;
@@ -127,3 +136,66 @@ Matrix Matrix::operator*(Matrix mat) const
     Matrix res(n1,m2,liste);  
     return(res);
 }
+
+/* transpose une matrice */
+Matrix Matrix::transpose() const
+{
+    int n=m_nligne;
+    int m=m_ncolonne;
+    std::vector <int> liste;
+    
+    for (int i=0; i<n; i++){
+        for (int j=0; j<m; j++){
+            liste.push_back(getv(j,i));
+        }
+    }
+    Matrix transpose(m,n,liste);
+    return(transpose);
+
+}
+/* norme matricielle */
+
+
+
+int Matrix::norme(Matrix mat){
+    int n=m_nligne;
+    int m=m_ncolonne;
+    int norme2=0;
+    for (int i=0; i<n; i++){
+        for (int j=0; j<m; j++){
+            norme2=norme2+mat(i,j);
+        }
+    }
+    return(sqrt(norme2));
+}
+/* extrait une ligne et renvoie le vecteur colonne */
+Matrix Matrix::ligne(int i){
+    int n=m_nligne;
+    int m=m_ncolonne;
+    std::vector<int> tab;
+    for (int j=0; j<m; j++){
+        tab.push_back(getv(i,j));
+    }
+    return(Matrix(n,1,tab));
+}
+
+Matrix Matrix::colonne(const Matrix mat){
+    int n=m_nligne;
+    for (int i=0; i<n; i++){
+        mat.tab.push_back(getv(i,1));
+    }
+    return(mat);
+}
+
+
+// Matrix Matrix::solve( Matrix A, Matrix b, Matrix x0){
+//     Matrix r=b-A*x0;
+//     Matrix p=r;
+//     int k=0;
+//     while (norme(r) !=0){
+//         Matrix num=r.transpose()*r;
+//         int den=(p.transpose()*A*p);
+//         Matrix a=num / den ;
+
+//     }
+// }
