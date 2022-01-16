@@ -1,3 +1,4 @@
+#pragma once 
 #include <vector>
 
 class Matrix
@@ -19,20 +20,22 @@ public:
     int getv(int i, int j) const;
     int operator()(int i, int j) const;
     void print() const;
+    void set(int i, int j, int valeur);
     Matrix operator+(const Matrix &mat) const;
     Matrix operator-(const Matrix &mat) const;
-    Matrix operator*(int entier) const;
+    Matrix operator*(float scalaire) const;
     Matrix operator*(const Matrix mat) const;
     /* question 2 */
     Matrix transpose() const;
     Matrix ligne(int i);
-    int norme(Matrix mat);
-    Matrix solve(Matrix A, Matrix b, Matrix x0) ;
-    Matrix Id(int n);
+    int norme();
+    void Id();
     Matrix colonne(const Matrix mat);
+    float convert();
 
     /* get */
     std::vector <int> getTab();
+    int getn_ligne();
     
 
 

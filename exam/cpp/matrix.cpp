@@ -36,6 +36,8 @@ Matrix::~Matrix()
 
 std::vector <int> Matrix::getTab() {return tab;}
 
+int Matrix::getn_ligne(){return m_nligne;}
+
 /*opérateurs*/
 
 /* permet d'accéder à l'élement (i,j) de la matrice */
@@ -63,6 +65,15 @@ void Matrix::print() const{
         std::cout << std::endl;
     }
 }
+
+/* fait un changement de valeur */
+void Matrix::set(int i, int j, int valeur){
+    int n=m_nligne;
+    int m=m_ncolonne;
+    int indc=m*i +j;
+    tab[indc]=valeur;
+}
+
 /* somme de deux matrices */
 Matrix Matrix::operator+(const Matrix &mat) const 
 {
@@ -94,8 +105,8 @@ Matrix Matrix::operator-(const Matrix &mat) const
     return(res);
 }
 
-/* produit d'une matrice par un entier */
-Matrix Matrix::operator*(int entier) const
+/* produit d'une matrice par un scalaire */
+Matrix Matrix::operator*(float scalaire) const
 {
     int n=m_nligne;
     int m=m_ncolonne;
@@ -103,7 +114,7 @@ Matrix Matrix::operator*(int entier) const
     Matrix res(n, m, 0);
     for (int i=0; i<n*m; i++)
     {
-        res.tab [i] =entier * tab[i];
+        res.tab [i] = scalaire * tab[i];
         
 
     }
@@ -153,22 +164,8 @@ Matrix Matrix::transpose() const
     return(transpose);
 
 }
-/* norme matricielle */
 
-
-
-int Matrix::norme(Matrix mat){
-    int n=m_nligne;
-    int m=m_ncolonne;
-    int norme2=0;
-    for (int i=0; i<n; i++){
-        for (int j=0; j<m; j++){
-            norme2=norme2+mat(i,j);
-        }
-    }
-    return(sqrt(norme2));
-}
-/* extrait une ligne et renvoie le vecteur colonne */
+/* extrait une ligne */
 Matrix Matrix::ligne(int i){
     int n=m_nligne;
     int m=m_ncolonne;
@@ -176,26 +173,40 @@ Matrix Matrix::ligne(int i){
     for (int j=0; j<m; j++){
         tab.push_back(getv(i,j));
     }
-    return(Matrix(n,1,tab));
+    return(Matrix(1,m,tab));
 }
 
-Matrix Matrix::colonne(const Matrix mat){
+/* la matrice courante est une matrice identité */
+void Matrix::Id(){
     int n=m_nligne;
-    for (int i=0; i<n; i++){
-        mat.tab.push_back(getv(i,1));
+    int m=m_ncolonne;
+    for (int i=0; i<n*m; i++){
+        tab[i]=0;
+
     }
-    return(mat);
+    for (int i=0; i<n; i++){
+        tab[i+m*i]=1;
+    }
+}
+
+/* prend une matrice (1,1) et renvoie l'entier correspondant */
+float Matrix::convert(){
+    return(getv(0,0));
 }
 
 
-// Matrix Matrix::solve( Matrix A, Matrix b, Matrix x0){
-//     Matrix r=b-A*x0;
-//     Matrix p=r;
-//     int k=0;
-//     while (norme(r) !=0){
-//         Matrix num=r.transpose()*r;
-//         int den=(p.transpose()*A*p);
-//         Matrix a=num / den ;
+/* norme matricielle */
 
-//     }
-// }
+
+
+int Matrix::norme(){
+    int n=m_nligne;
+    int m=m_ncolonne;
+    int norme2=0;
+    for (int i=0; i<n; i++){                                                                                                                                                                    
+        for (int j=0; j<m; j++){
+            norme2=norme2+getv(i,j);
+        }
+    }
+    return(sqrt(norme2));
+}
