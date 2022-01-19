@@ -12,14 +12,14 @@ Matrix::Matrix()
 
 /* construire une matrice remplie d'une unique valeur */
 
-Matrix::Matrix(int nligne, int ncolonne, int valeur): m_nligne(nligne), m_ncolonne(ncolonne), tab(nligne*ncolonne, valeur)
+Matrix::Matrix(int nligne, int ncolonne, float valeur): m_nligne(nligne), m_ncolonne(ncolonne), tab(nligne*ncolonne, valeur)
 {
     
 }
 
 /* construire une matrice à partir d'une ligne */
 
-Matrix::Matrix(int nligne, int ncolonne, std::vector <int> liste){
+Matrix::Matrix(int nligne, int ncolonne, std::vector <float> liste){
     m_nligne=nligne;
     m_ncolonne=ncolonne;
     for (int i=0; i< nligne*ncolonne; i++){
@@ -34,14 +34,14 @@ Matrix::~Matrix()
 
 }
 
-std::vector <int> Matrix::getTab() {return tab;}
+
 
 int Matrix::getn_ligne(){return m_nligne;}
 
 /*opérateurs*/
 
 /* permet d'accéder à l'élement (i,j) de la matrice */
-int Matrix::getv(int i, int j) const
+float Matrix::getv(int i, int j) const
 {
     int n=m_nligne;
     int m=m_ncolonne;
@@ -50,7 +50,7 @@ int Matrix::getv(int i, int j) const
     return(res);
 }
 
-int Matrix::operator()(int i,int j) const{
+float Matrix::operator()(int i,int j) const{
     return(getv(i,j));
 }
 
@@ -67,7 +67,7 @@ void Matrix::print() const{
 }
 
 /* fait un changement de valeur */
-void Matrix::set(int i, int j, int valeur){
+void Matrix::set(int i, int j, float valeur){
     int n=m_nligne;
     int m=m_ncolonne;
     int indc=m*i +j;
@@ -129,7 +129,7 @@ Matrix Matrix::operator*(Matrix mat) const
     int n2=mat.m_nligne;
     int m2=mat.m_ncolonne;
     assert (m1==n2);
-    std::vector <int> liste;
+    std::vector <float> liste;
     
     
     
@@ -153,7 +153,7 @@ Matrix Matrix::transpose() const
 {
     int n=m_nligne;
     int m=m_ncolonne;
-    std::vector <int> liste;
+    std::vector <float> liste;
     
     for (int i=0; i<n; i++){
         for (int j=0; j<m; j++){
@@ -169,7 +169,7 @@ Matrix Matrix::transpose() const
 Matrix Matrix::ligne(int i){
     int n=m_nligne;
     int m=m_ncolonne;
-    std::vector<int> tab;
+    std::vector<float> tab;
     for (int j=0; j<m; j++){
         tab.push_back(getv(i,j));
     }
@@ -199,7 +199,7 @@ float Matrix::convert(){
 
 
 
-int Matrix::norme(){
+float Matrix::norme(){
     int n=m_nligne;
     int m=m_ncolonne;
     int norme2=0;
