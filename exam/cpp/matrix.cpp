@@ -46,7 +46,7 @@ float Matrix::getv(int i, int j) const
     int n=m_nligne;
     int m=m_ncolonne;
     int indc=m*i +j;
-    int res=tab[indc];
+    float res=tab[indc];
     return(res);
 }
 

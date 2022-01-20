@@ -18,17 +18,25 @@ int test_operateurs()
    m3.set(0,0,1.2);
    Matrix m6= Matrix(1,1,2);
 
- 
+    std::cout << "test affichage et construction" << std::endl;
     std::cout << "m2 = " ;
     m2.print();
-    std::cout << "m3 = " ;
+    std::cout << "\n";
+    std::cout << "m3 = "  ;
     m3.print();
-    std::cout << "m3(1,2) =" << m3(1,2) ;
-    std::cout << "m4 = " ;
+    std::cout << "\n";
+    std::cout << "test affichage d'une valeur" << std::endl;
+    std::cout << "m3(1,2) =" << m3(1,2) << "\n";
+    std::cout << "\n";
+    std::cout << "test produit de matrice" << std::endl;
+    std::cout << "m4 = ";
     m4.print();
-    std::cout << "m5 = " ;
+    std::cout << "\n";
+    std::cout << "test transposition" << std::endl;
+    std::cout << "m5 = ";
     m5.print();
-    std::cout << "m6 = " << m6.convert() ;
+    std::cout << "\n";
+    std::cout << "m6 = " << m6.convert()<< "\n" ;
     
 
 
@@ -57,11 +65,12 @@ int main(int, char**) {
 
 
 
-    float N=5.;
-    float M=100.;
+    float dx=0.05;
+    
     float dt=0.01;
-    constr_K(N);
-    calcul_euler_expl(N,dt, M);
+    
+    {constr_K(dx);}
+    {calcul_euler_expl(dt, dx);}
     // test_inversion();
 
 }
