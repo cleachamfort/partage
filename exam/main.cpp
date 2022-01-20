@@ -46,16 +46,52 @@ int test_operateurs()
 }
 
 void test_inversion(){
+    
+    std::cout << "test inversion avec la matrice identité" <<std::endl;
+    
     Matrix A(4,4,0);
     A.Id();
-    A.set(0,0,2);
+    
     Matrix b=Matrix(4, 1, {4,1,2,3});
     Matrix x0= Matrix(4, 1, {0,0,0,0});
     Matrix x = solve(A,b, x0);
+    std::cout << "A = ";
     A.print();
+    std::cout << "\n";
+    std::cout << "b = ";
+    b.print();
+    std::cout << "\n";
+    std::cout << "x = ";
     x.print();
-    
+    std::cout << "\n";
 
+    
+    std::cout << "test inversion avec une matrice non diagonale" <<std::endl;
+    Matrix A1= Matrix(3,3, {0,1,2,3,4,5,6,7,8} );
+    Matrix b1=Matrix(3, 1, {1,2,2});
+    Matrix x01= Matrix(3, 1, {0,0,0});
+    Matrix x1=solve(A1,b1,x01);
+
+    std::cout << "A = ";
+    A1.print();
+    std::cout << "\n";
+    std::cout << "b = ";
+    b1.print();
+
+    std::cout << "l'algorithme renvoie x = ";
+    x1.print();
+    std::cout << "\n";
+
+    std::cout << "l'algorithme renvoie x = ";
+    x1.print();
+    std::cout << "\n";
+    std::cout << "vérification du calcul" <<std::endl;
+
+    std::cout << "Ax = ";
+    (A1*x1).print();
+    std::cout << "\n";
+
+    
 }
 
 
@@ -65,13 +101,13 @@ int main(int, char**) {
 
 
 
-    float dx=0.05;
+    // float dx=0.05;
     
-    float dt=0.01;
+    // float dt=0.01;
     
-    {constr_K(dx);}
-    {calcul_euler_expl(dt, dx);}
-    // test_inversion();
+    // {constr_K(dx);}
+    // {calcul_euler_expl(dt, dx);}
+    test_inversion();
 
 }
 

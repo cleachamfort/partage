@@ -12,17 +12,16 @@ Matrix solve( Matrix A, Matrix b, Matrix x0){
     int k=0;
     Matrix x=x0;
     while (r.norme() > 0.00001){
-        float num=(r.transpose()*r).convert();
-        float den=((p.transpose()*A*p)).convert();
-        float div=1/den;
-        float alpha=num * div ;
+        float alpha=(r.transpose()*r).convert() / ((p.transpose()*A*p)).convert() ;
         x=x+p*alpha;
-        Matrix r_prec=r;
-        r=r-A*p*alpha;
-        float div2=(r_prec.transpose()*r_prec).convert();
-        float beta= (r.transpose()*r).convert() *  1 / div2  ;
-        Matrix p= r + p* beta;
-        x.print();
+        
+        Matrix r1=r-(A*p*alpha);
+        
+        float beta= (r1.transpose()*r1).convert() / (r.transpose()*r).convert()  ;
+        Matrix p= r1 + p* beta;
+        r=r1;
+
+        
 
     }
     return(x);

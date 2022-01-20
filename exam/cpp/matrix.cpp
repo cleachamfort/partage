@@ -199,14 +199,26 @@ float Matrix::convert(){
 
 
 
+// float Matrix::norme(){
+//     int n=m_nligne;
+//     int m=m_ncolonne;
+//     int norme2=0;
+//     for (int i=0; i<n; i++){                                                                                                                                                                    
+//         for (int j=0; j<m; j++){
+//             norme2=norme2+pow(getv(i,j),2);
+//         }
+//     }
+//     return(sqrt(norme2));
+// }
+
 float Matrix::norme(){
     int n=m_nligne;
     int m=m_ncolonne;
     int norme2=0;
     for (int i=0; i<n; i++){                                                                                                                                                                    
-        for (int j=0; j<m; j++){
-            norme2=norme2+getv(i,j);
-        }
+        
+            norme2=norme2+pow(getv(i,0),2);
+        
     }
     return(sqrt(norme2));
 }
