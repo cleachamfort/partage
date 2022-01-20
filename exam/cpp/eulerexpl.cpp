@@ -1,10 +1,12 @@
 
 # include "matrix.h"
 #include "eulerexpl.h"
+#include "solve.h"
 # include <vector>
 # include <math.h>
 # include <iostream>
 #include <fstream>
+
 #define M_PI 3.14159265358979323846
 
 // Matrix constr_X(float N){
@@ -75,6 +77,48 @@ for (int k=0; k<N; k++){
     txt <<T2(M-1,0) <<  "\n ";
     
     T2=A*T2;
+    }
+
+}
+
+
+void calcul_euler_impl(float dt, float dx ){
+    float N=1/dt;
+float M=1/dx;
+Matrix K=constr_K(dx);
+
+/*construction de T0*/
+
+Matrix Id(M,M,0);
+Id.Id();
+
+Matrix T0(M, 1, 0);
+for (int i=0; i<M; i++){
+    float a=1/2+sin(2*M_PI*i/N)-1/2*cos(2*M_PI*i/N);
+    T0.set(i,0,a);
+}
+
+
+/* itération */
+
+
+Matrix T2=T0;
+std::ofstream txt;
+
+txt.open("../src/temperatureimpl.csv");
+Matrix A=(Id +K*dt);
+
+for (int k=0; k<N; k++){
+    for (unsigned int i = 0; i < M-1 ; i++)
+        { 
+            txt << T2(i,0) << ",";       
+        }
+
+    txt <<T2(M-1,0) <<  "\n ";
+
+    
+    Matrix x0=Matrix(M,1,0);
+    T2=solve(A,T2,x0);
     }
 
 }

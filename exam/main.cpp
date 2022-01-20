@@ -101,12 +101,13 @@ int main(int, char**) {
 
 
 
-    // float dx=0.05;
+    float dx=0.05;
     
-    // float dt=0.01;
+    float dt=0.01;
     
-    // {constr_K(dx);}
-    // {calcul_euler_expl(dt, dx);}
+    {constr_K(dx);}
+    {calcul_euler_expl(dt, dx);}
+    {calcul_euler_impl(dt,dx);}
     test_inversion();
 
 }
